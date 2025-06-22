@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace vrem
 {
-    internal class Reflector : ICharPipeline
+    internal class Reflector(string key) : ICharPipeline
     {
-        public Reflector(string key)
-        {
-
-        }
 
         public byte Process(byte b)
         {

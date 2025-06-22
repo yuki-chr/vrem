@@ -1,0 +1,15 @@
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\bin\Debug\net8.0\vrem.exe
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\bin\Debug\net8.0\vrem.deps.json
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\bin\Debug\net8.0\vrem.runtimeconfig.json
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\bin\Debug\net8.0\vrem.dll
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\bin\Debug\net8.0\vrem.pdb
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.AssemblyInfoInputs.cache
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.AssemblyInfo.cs
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.csproj.CoreCompileInputs.cache
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.sourcelink.json
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.dll
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\refint\vrem.dll
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.pdb
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\vrem.genruntimeconfig.cache
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\obj\Debug\net8.0\ref\vrem.dll

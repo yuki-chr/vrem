@@ -8,21 +8,22 @@ namespace vrem
 {
     internal class Rotor(string fullkey, int ckey) : ICharPipeline
     {
-        private List<byte> Key = []; //TODO implement method to create subst map
+        private const int KeySize = 256;
+        private readonly byte Key = Encoding.UTF8.GetBytes(fullkey)[ckey];
         private int RotationIndex = 0;
-        private readonly ICharPipeline Next = ckey<fullkey.Length - 1 ? new Rotor(fullkey, ckey++) : new Reflector(fullkey);
+        private readonly ICharPipeline Next = ckey<fullkey.Length - 1 ? new Rotor(fullkey, ckey+1) : new Reflector(fullkey);
 
         public byte Process(byte b)
         {
-            byte forward = Key[(b+RotationIndex)%Key.Count];
+            byte forward = (byte)((Key+RotationIndex+b)%KeySize);
             byte backward = Next.Process(forward);
-            return (byte)((Key.IndexOf(backward)-RotationIndex)%Key.Count);
+            return (byte)((backward-(Key+RotationIndex))%KeySize);
         }
 
         public void Rotate()
         {
             RotationIndex++;
-            if(RotationIndex >= Key.Count)
+            if(RotationIndex >= KeySize)
             {
                 RotationIndex = 0;
                 Next.Rotate();
