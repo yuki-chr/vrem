@@ -10,7 +10,7 @@ namespace vrem
     internal class Machine(string key)
     {
         private readonly string Key = key;
-        private readonly Rotor Head = new(key, 0);
+        private readonly Rotor Head = new(key);
 
         public string Process(string text)
         {

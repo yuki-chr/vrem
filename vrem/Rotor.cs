@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace vrem
 {
-    internal class Rotor(string fullkey, int ckey) : ICharPipeline
+    internal class Rotor(string fullkey, int ckey = 0) : ICharPipeline
     {
         private const int KeySize = 256;
         private readonly byte Key = Encoding.UTF8.GetBytes(fullkey)[ckey];
