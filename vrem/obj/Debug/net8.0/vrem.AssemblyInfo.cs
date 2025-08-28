@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vrem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+244c0ae1931ae75ca4e5541df6768146da75e9c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb7881d1a1deafb6fbd50258ca5a06dcce1a6a17")]
 [assembly: System.Reflection.AssemblyProductAttribute("vrem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vrem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

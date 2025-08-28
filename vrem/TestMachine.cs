@@ -13,7 +13,7 @@ namespace vrem
         public string Process(string text)
         {
             List<string> bytesStr = [.. text.Split(" ")];
-            List<byte> bytes = new();
+            List<byte> bytes = [];
             foreach (string str in bytesStr)
             {
                 bytes.Add((byte)(char)Int32.Parse(str));
