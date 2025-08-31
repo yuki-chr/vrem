@@ -20,7 +20,10 @@ namespace vrem
             }
             else
             {
-                return (byte)((b + (KeySize / 2)) % KeySize); //TODO implement mirrored transformation
+                //return (byte)((b + (KeySize / 2)) % KeySize); //TODO implement mirrored transformation
+                byte temp = (byte)((b + (KeySize / 2)) % KeySize); //temp
+                Console.WriteLine($"mirroring {b} into {temp}"); //check
+                return temp; //temp
             }
         }
 
