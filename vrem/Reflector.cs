@@ -9,6 +9,7 @@ namespace vrem
     internal class Reflector(string key) : ICharPipeline
     {
         private const int KeySize = 256;
+        private Mirror mirror = new();
         private bool selfcrypt = false;
 
         public byte Process(byte b)
@@ -21,9 +22,10 @@ namespace vrem
             else
             {
                 //return (byte)((b + (KeySize / 2)) % KeySize); //TODO implement mirrored transformation
-                byte temp = (byte)((b + (KeySize / 2)) % KeySize); //temp
+                byte temp = mirror.GetMirrored(b); //temp
                 Console.WriteLine($"mirroring {b} into {temp}"); //check
                 return temp; //temp
+                
             }
         }
 
