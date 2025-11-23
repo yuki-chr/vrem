@@ -15,6 +15,14 @@ namespace vrem
             Pairs.Add(new MirrorPair(x, y));
         }
 
+        public void Initialize()
+        {
+            for (byte i = 0; i < 128; i++)
+            {
+                AddPair(i, (byte)(255 - i));
+            }
+        }
+
         public byte GetMirrored(byte b)
         {
             foreach (MirrorPair pair in Pairs)

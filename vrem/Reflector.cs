@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace vrem
 {
-    internal class Reflector(string key) : ICharPipeline
+    internal class Reflector : ICharPipeline
     {
         private const int KeySize = 256;
-        private Mirror mirror = new();
+        private readonly Mirror mirror = new();
         private bool selfcrypt = false;
+
+        public Reflector()
+        {
+            mirror.Initialize();
+        }
 
         public byte Process(byte b)
         {
