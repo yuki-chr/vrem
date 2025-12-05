@@ -26,17 +26,13 @@ namespace vrem
             }
             else
             {
-                //return (byte)((b + (KeySize / 2)) % KeySize); //TODO implement mirrored transformation
-                byte temp = mirror.GetMirrored(b); //temp
-                Console.WriteLine($"mirroring {b} into {temp}"); //check
-                return temp; //temp
+                return mirror.GetMirrored(b);
                 
             }
         }
 
         public void Rotate()
         {
-            //testing alternative method to deal with statistical analysis
             selfcrypt = true;
         }
     }

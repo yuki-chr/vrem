@@ -12,9 +12,8 @@ namespace vrem
         private readonly string Key = key;
         private readonly Rotor Head = new(key);
 
-        public string Process(string text)
+        public byte[] Process(byte[] bytes)
         {
-            List<byte> bytes = [.. Encoding.UTF8.GetBytes(text)];
             List<byte> processed = [];
             foreach (byte b in bytes)
             {
@@ -22,7 +21,7 @@ namespace vrem
                 Head.Rotate();
             }
 
-            return Encoding.UTF8.GetString([.. processed]);
+            return [.. processed];
         }
     }
 }

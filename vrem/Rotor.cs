@@ -16,13 +16,8 @@ namespace vrem
         public byte Process(byte b)
         {
             byte forward = (byte)((Key+RotationIndex+b)%KeySize);
-            Console.WriteLine($"converting {b} to {forward}"); //check
             byte backward = Next.Process(forward);
-            Console.WriteLine($"{forward} comes back as {backward}"); //check
-            byte temp = (byte)((backward - (Key + RotationIndex)) % KeySize); //temp
-            Console.WriteLine($"converting {backward} to {temp} and returning"); //check
-            return temp; //temp
-            //return (byte)((backward-(Key+RotationIndex))%KeySize);
+            return (byte)((backward - (Key + RotationIndex)) % KeySize);
         }
 
         public void Rotate()
