@@ -25,3 +25,5 @@ byte[] fileContent = File.ReadAllBytes(filePath);
 byte[] encryptedContent = m.Process(fileContent);
 
 File.WriteAllBytes(filePath, encryptedContent);
+
+Environment.Exit(0);

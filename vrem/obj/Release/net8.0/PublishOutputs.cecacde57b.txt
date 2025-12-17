@@ -1,0 +1,5 @@
+C:\Users\Lore\Documents\GitHub\vrem\vrem\bin\Release\net8.0\publish\vrem.exe
+C:\Users\Lore\Documents\GitHub\vrem\vrem\bin\Release\net8.0\publish\vrem.dll
+C:\Users\Lore\Documents\GitHub\vrem\vrem\bin\Release\net8.0\publish\vrem.deps.json
+C:\Users\Lore\Documents\GitHub\vrem\vrem\bin\Release\net8.0\publish\vrem.runtimeconfig.json
+C:\Users\Lore\Documents\GitHub\vrem\vrem\bin\Release\net8.0\publish\vrem.pdb

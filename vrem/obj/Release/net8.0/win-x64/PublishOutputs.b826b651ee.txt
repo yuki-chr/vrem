@@ -1,0 +1,2 @@
+C:\Users\Lore\Documents\GitHub\vrem\vrem\bin\Release\net8.0\publish\win-x64\vrem.pdb
+C:\Users\Lore\Documents\GitHub\vrem\vrem\bin\Release\net8.0\publish\win-x64\vrem.exe

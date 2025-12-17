@@ -11,7 +11,7 @@ namespace vrem
         private const int KeySize = 256;
         private readonly byte Key = Encoding.UTF8.GetBytes(fullkey)[ckey];
         private int RotationIndex = 0;
-        private readonly ICharPipeline Next = ckey<fullkey.Length - 1 ? new Rotor(fullkey, ckey+1) : new Reflector();
+        private readonly ICharPipeline Next = ckey<fullkey.Length - 1 ? new Rotor(fullkey, ckey+1) : new Reflector(fullkey);
 
         public byte Process(byte b)
         {

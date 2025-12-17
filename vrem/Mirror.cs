@@ -23,6 +23,21 @@ namespace vrem
             }
         }
 
+        public void Initialize(string key)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(key);
+            byte startc = 0;
+            foreach (byte b in bytes)
+            {
+                startc += b;
+            }
+            startc %= 128;
+            for (byte i = 0; i < 128; i++)
+            {
+                AddPair((byte)((startc + i) % 128), (byte)(255 - i));
+            }
+        }
+
         public byte GetMirrored(byte b)
         {
             foreach (MirrorPair pair in Pairs)

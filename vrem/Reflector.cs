@@ -17,6 +17,11 @@ namespace vrem
             mirror.Initialize();
         }
 
+        public Reflector(string key)
+        {
+            mirror.Initialize(key);
+        }
+
         public byte Process(byte b)
         {
             if (selfcrypt)
