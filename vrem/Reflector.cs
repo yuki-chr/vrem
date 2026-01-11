@@ -10,35 +10,43 @@ namespace vrem
     {
         private const int KeySize = 256;
         private readonly Mirror mirror = new();
-        private bool selfcrypt = false;
+        private int selfcount = 0;
+        private int selfcap = 1; //initialized as 1 since it will be multiplied
+
 
         public Reflector()
         {
             mirror.Initialize();
+            selfcap = KeySize;
         }
 
         public Reflector(string key)
         {
             mirror.Initialize(key);
+            foreach (byte b in Encoding.UTF8.GetBytes(key))
+            {
+                selfcap = (selfcap * b) % KeySize;
+            }
         }
 
         public byte Process(byte b)
         {
-            if (selfcrypt)
+            if (selfcount == selfcap)
             {
-                selfcrypt = false;
+                selfcount = (selfcount + 1) % KeySize;
                 return b;
             }
             else
             {
+                selfcount = (selfcount + 1) % KeySize;
                 return mirror.GetMirrored(b);
-                
             }
         }
 
         public void Rotate()
         {
-            selfcrypt = true;
+            selfcap = (selfcap*selfcap)%KeySize;
         }
     }
 }
+
