@@ -6,7 +6,7 @@ IMPORTANT: Read the [security considerations](#security-considerations) at the b
 VREM works on a byte-by-byte basis, independent of the file's own encoding. As such, VREM's substitution map has a period of 256^L, where L is the length of the key.
 
 VREM uses a reflector layer (dynamically generated based on the key) after the virtual rotors, which makes the machine self-reciprocal, thus allowing for encryption and decryption via the same algorithm, without any need to change mode.
-By itself, this mechanism introduces a weakness to cryptanalysis as no character can ever be encrypted into itself.
+By itself, this mechanism introduces a weakness to cryptanalysis as no character can ever be encrypted into itself. To address this issue, VREM uses an additional mechanism called selfcrypt. In every block of 256 bytes processed by the algorythm, one byte is guaranteed to be encrypted into itself. The exact position of this byte however is calculated based on the key, and since the key has arbitrary length there are infinite keys which produce the same selfcrypt index, thus making it impossible to extract the key in the event that the index was found. Additionally, the selfcrypt index is updated once every time the machine completes a full rotation of its substitution map, but the updated value is not necessarily different from the previous one.
 ## Usage
 `vrem <key> <path>`
 
