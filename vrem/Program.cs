@@ -4,26 +4,56 @@ using System;
 using System.IO;
 using System.Numerics;
 
-if (args.Length < 2)
+if (args.Length < 1)
 {
-    Console.WriteLine("Usage: vrem <key> <file path>");
+    Console.WriteLine("Usage: vrem <key> <file path> OR vrem <file path>");
     return;
 }
 
-string key = args[0];
-string filePath = args[1];
+string filePath;
+string? key;
 
-Machine m = new(key);
-
-if (!File.Exists(filePath))
+if (args.Length == 1)
 {
-    Console.WriteLine($"File not found: {filePath}");
-    return;
+    filePath = args[0];
+    if (!File.Exists(filePath))
+    {
+        Console.WriteLine($"File not found: {filePath}");
+        return;
+    }
+
+    Console.Write("Enter key: ");
+    key = Console.ReadLine();
+    if (key == null)
+    {
+        Console.WriteLine("Please provide a key");
+        return;
+    }
+
+    Machine m = new(key);
+
+    byte[] fileContent = File.ReadAllBytes(filePath);
+    byte[] encryptedContent = m.Process(fileContent);
+
+    File.WriteAllBytes(filePath, encryptedContent);
 }
+else
+{
+    key = args[0]; //key shouldn't be able to be null here because otherwise it wouldn't count as argument i think
+    filePath = args[1];
 
-byte[] fileContent = File.ReadAllBytes(filePath);
-byte[] encryptedContent = m.Process(fileContent);
+    Machine m = new(key);
 
-File.WriteAllBytes(filePath, encryptedContent);
+    if (!File.Exists(filePath))
+    {
+        Console.WriteLine($"File not found: {filePath}");
+        return;
+    }
+
+    byte[] fileContent = File.ReadAllBytes(filePath);
+    byte[] encryptedContent = m.Process(fileContent);
+
+    File.WriteAllBytes(filePath, encryptedContent);
+}
 
 Environment.Exit(0);

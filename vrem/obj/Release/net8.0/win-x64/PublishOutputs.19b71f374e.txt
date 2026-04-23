@@ -1,0 +1,2 @@
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\bin\Release\net8.0\publish\win-x64\vrem.pdb
+C:\Users\4lpha\Desktop\workshop\coding\vrem\vrem\bin\Release\net8.0\publish\win-x64\vrem.exe

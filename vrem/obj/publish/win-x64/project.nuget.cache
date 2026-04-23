@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "7avDGgHOMWs=",
+  "dgSpecHash": "atfAU7DRC44=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lore\\Documents\\GitHub\\vrem\\vrem\\vrem.csproj",
+  "projectFilePath": "C:\\Users\\4lpha\\Desktop\\workshop\\coding\\vrem\\vrem\\vrem.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Lore\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.22\\microsoft.net.illink.tasks.8.0.22.nupkg.sha512",
-    "C:\\Users\\Lore\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.22\\microsoft.netcore.app.runtime.win-x64.8.0.22.nupkg.sha512",
-    "C:\\Users\\Lore\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.22\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.22.nupkg.sha512",
-    "C:\\Users\\Lore\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.22\\microsoft.aspnetcore.app.runtime.win-x64.8.0.22.nupkg.sha512"
+    "C:\\Users\\4lpha\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.17\\microsoft.net.illink.tasks.8.0.17.nupkg.sha512",
+    "C:\\Users\\4lpha\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.17\\microsoft.netcore.app.runtime.win-x64.8.0.17.nupkg.sha512",
+    "C:\\Users\\4lpha\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.17\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.17.nupkg.sha512",
+    "C:\\Users\\4lpha\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.17\\microsoft.aspnetcore.app.runtime.win-x64.8.0.17.nupkg.sha512"
   ],
   "logs": []
 }
